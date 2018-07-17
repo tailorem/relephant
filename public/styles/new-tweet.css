@@ -1,8 +1,8 @@
 section.new-tweet {
-    background-color: #eee;
-    border-radius: 5px;
-    border: solid 1px darkgrey;
-    padding: .75em;
+  background-color: #eee;
+  border-radius: 5px;
+  border: solid 1px darkgrey;
+  padding: .75em;
 }
 
 section.new-tweet hr {
