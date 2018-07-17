@@ -25,3 +25,7 @@ section.new-tweet span {
   font-style: italic;
   margin: .5em;
 }
+
+.neg-count {
+  color: red;
+}
