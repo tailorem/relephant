@@ -10,9 +10,10 @@
   background-color: #eee;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  color: #4f6b73;
+  /*color: #4f6b73;*/
   line-height: 100%;
   padding: 10px;
+  opacity: 0.75;
   /*width: 100%;*/
 }
 
@@ -33,7 +34,7 @@
   display: inline;
   float: left;
   height: 2.5em;
-  opacity: 0.75;
+  /*opacity: 0.75;*/
   width: 2.5em;
 }
 
@@ -68,11 +69,8 @@
   border-color: darkgray;
 }
 
-.tweet:hover header {
+.tweet:hover header, .tweet:hover img {
   color: #244751;
-}
-
-.tweet:hover img {
   opacity: 1;
 }
 
@@ -81,3 +79,4 @@
   opacity: 1;
   float: right;
 }
+
