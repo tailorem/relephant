@@ -34,57 +34,28 @@ var data = [
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
     "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-      },
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Johann von Goethe",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-      },
-      "handle": "@johann49"
-    },
-    "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-    },
-    "created_at": 1461113796368
   }
 ];
 
-function renderTweets(tweets) {
-  // loops through tweets
-  for (var index in data) {
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    var $tweet = createTweetElement(data[index]);
-    $('#tweets').append($tweet);
-  }
-  // NOTE TO SELF: USE MOMENT TO RENDER TIMESTAMPS
+function renderTweets(tweetData) {
+  // tweets.map() performs given function (transforming tweets into DOM structure) on each element of tweets, BUT will it translate to single tweet? Probably, so 'tweets' has been re-factored to 'tweetData'.
+  $('#tweets').append(tweetData.map(createTweetElement));
 }
 
 
 function createTweetElement(tweet) {
   var $tweet = $("<article>").addClass("tweet");
-  var icons ='<i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>';
 
-  $tweet.append('<header><img class="avatar" src="' + tweet.user.avatars.small + '" /><h3>' + tweet.user.name + '</h3><span>' + tweet.user.handle)
-  .append("<p>" + tweet.content.text + "</p>")
-  .append('<footer><p>' + moment(tweet.created_at).fromNow() + '</p><p class="icons">' + icons + '</p>');
+  var $header = $("<header>").appendTo($tweet);
+  $("<img>").addClass("avatar").attr({src: tweet.user.avatars.small}).appendTo($header);
+  $("<h3>").text(tweet.user.name).appendTo($header);
+  $("<span>").text(tweet.user.handle).appendTo($header);
+
+  $("<p>").text(tweet.content.text).appendTo($tweet);
+
+  var $footer = $("<footer>").appendTo($tweet);
+  $("<p>").text(moment(tweet.created_at).fromNow()).appendTo($footer);
+  $('<p><i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
 
   return $tweet;
 }
