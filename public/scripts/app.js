@@ -72,12 +72,9 @@ function renderTweets(tweets) {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     var $tweet = createTweetElement(data[index]);
-    // console.log(tweet);
     $('#tweets').append($tweet);
   }
-
-  // console.log(tweets);
-  // $('#tweets').append($tweet);
+  // NOTE TO SELF: USE MOMENT TO RENDER TIMESTAMPS
 }
 
 
