@@ -61,7 +61,7 @@ function createTweetElement(tweet) {
 }
 
 
-$( document ).ready(function() {
+$(function() {
   renderTweets(data);
 });
 
