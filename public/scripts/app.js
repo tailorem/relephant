@@ -18,7 +18,7 @@ var data = [
     "content": {
       "text": "Something thoughtful should go here, but it won't."
     },
-    "created_at": "X moment in time"
+    "created_at": 1531928614954
   },
   {
     "user": {
@@ -84,7 +84,7 @@ function createTweetElement(tweet) {
 
   $tweet.append('<header><img class="avatar" src="' + tweet.user.avatars.small + '" /><h3>' + tweet.user.name + '</h3><span>' + tweet.user.handle)
   .append("<p>" + tweet.content.text + "</p>")
-  .append('<footer><p>' + tweet.created_at + '</p><p class="icons">' + icons + '</p>');
+  .append('<footer><p>' + moment(tweet.created_at).fromNow() + '</p><p class="icons">' + icons + '</p>');
 
   return $tweet;
 }

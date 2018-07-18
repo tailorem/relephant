@@ -19,13 +19,12 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
-
     <!-- Character counter -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+    <!-- Moment.js -->
+    <script src="/scripts/moment.min.js"></script>
     <!-- Viewport for responsive design -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
   </head>
@@ -47,6 +46,7 @@
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" name="Tweet" value="Tweet">
           <span class="counter">140</span>
+          <p></p>
         </form>
       </section>
       <section id="tweets">
@@ -54,5 +54,6 @@
       </section>
     </main>
 
+    <script type="text/javascript">moment("20111031", "YYYYMMDD").fromNow();</script>
   </body>
 </html>
