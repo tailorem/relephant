@@ -22,3 +22,29 @@
   line-height: 80px;
   margin-left: 10px;
 }
+
+#nav-bar .right {
+  float: right;
+  height: 100%;
+  line-height: 100%;
+}
+
+#compose {
+  background-color: white;
+  border: solid 1px #244751;
+  border-radius: 5px;
+  color: #00a087;
+  opacity: .75;
+  padding: 0;
+  /*font: inherit;*/
+  outline: inherit;
+  height: 3.5em;
+  width: 7em;
+  margin: .75em .25em;
+}
+
+#compose:hover {
+  color: #244751;
+  opacity: 1;
+}
+

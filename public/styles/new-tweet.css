@@ -29,3 +29,10 @@ section.new-tweet span {
 .neg-count {
   color: red;
 }
+
+#error {
+  color: red;
+  font-style: italic;
+  display: none;
+  margin: .5em 0;
+}
