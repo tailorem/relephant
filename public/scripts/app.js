@@ -50,35 +50,35 @@ $(function() {
 
     var input = event.target.elements.text.value;
 
-    $("#error").slideUp(function() {
+    $("#error").slideUp();
 
-      if (input.length > 140) {
-        event.preventDefault();
-        $("#error").slideDown().text("Sorry, your tweet cannot exceed 140 characters.");
-        // alert("Sorry, your tweet cannot exceed 140 characters.");
-        return;
-      }
-      if (input.trim().length < 1) {
-        event.preventDefault();
-        $("#error").slideDown().text("Oops, you can't post a blank tweet.");
-        // alert("Oops, you can't post a blank tweet.");
-        return;
-      }
+    if (input.length > 140) {
+      event.preventDefault();
 
-      $.ajax({
-        method: "POST",
-        url: "/tweets",
-        data: $(this).serialize()
-      })
-      .done(function() {
+      $("#error").slideDown().text("Sorry, your tweet cannot exceed 140 characters.");
+      // alert("Sorry, your tweet cannot exceed 140 characters.");
+      return;
+    }
+    if (input.trim().length < 1) {
+      event.preventDefault();
+      $("#error").slideDown().text("Oops, you can't post a blank tweet.");
+      // alert("Oops, you can't post a blank tweet.");
+      return;
+    }
 
-        loadTweets();
-      });
-
-      event.target.elements.text.value = "";
-      $("span.counter").text(140);
-      // console.log($(this).serialize());
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $(this).serialize()
+    })
+    .done(function() {
+      console.log("am i here");
+      loadTweets();
     });
+
+    event.target.elements.text.value = "";
+    $("span.counter").text(140);
+    // console.log($(this).serialize());
 
   });
 
