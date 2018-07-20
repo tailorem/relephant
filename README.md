@@ -19,3 +19,12 @@ Built upon LHL provided starter-code to learn and practice HTML, CSS, JS, jQuery
 ## Additional Notes
 
 This project uses MongoDB and requires a .env file/manually set PORT to run locally.
+View the live version at http://tweetertale.herokuapp.com/
+
+## Final Product
+
+!["Screenshot of login page"](https://github.com/tailorem/TinyApp/blob/master/docs/login.png?raw=true)
+!["Screenshot of registration page"](https://github.com/tailorem/TinyApp/blob/master/docs/register.png?raw=true)
+!["Screenshot of urls index"](https://github.com/tailorem/TinyApp/blob/master/docs/index.png?raw=true)
+!["Screenshot of new url page"](https://github.com/tailorem/TinyApp/blob/master/docs/newURL.png?raw=true)
+!["Screenshot of edit page"](https://github.com/tailorem/TinyApp/blob/master/docs/edit.png?raw=true)
