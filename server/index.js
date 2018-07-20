@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // jshint esversion:6
 "use strict";
 
@@ -8,7 +10,6 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
-require("dotenv").config();
 
 // require MongoDB
 const {MongoClient} = require("mongodb");
