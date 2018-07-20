@@ -1,14 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// all functions called here are defined in helpers.js
-
+// All functions called in this file are defined in helpers.js
 $(function() {
 
-  $(".new-tweet form").on("submit", function(event) {
+  $(".new-tweet form").submit(function(event) {
     event.preventDefault();
 
     var input = event.target.elements.text.value;
@@ -36,29 +29,15 @@ $(function() {
 
     event.target.elements.text.value = "";
     $("span.counter").text(140);
-    // console.log($(this).serialize());
 
   });
 
   loadTweets();
 
   $("#compose").on("click", function() {
-    $("section.new-tweet").slideToggle(300, function() {
+    $("section.new-tweet").slideToggle(400, function() {
       $(".new-tweet textarea").focus();
     });
   });
 
-  // renderTweets(data);
 });
-
-
-// NOTE TO SELF:
-    // Practice/review lexical scope, this, .bind()
-    // console.log(this);
-    // function test() {
-    //   console.log("Test output, don't forget to delete me.");
-    //   console.log(this);
-    //   console.log($(this));
-    //   return;
-    // }
-    // test();

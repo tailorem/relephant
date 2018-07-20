@@ -10,9 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Global layout */
 
 body {
   margin: 0;
@@ -23,14 +21,12 @@ body {
   font-kerning: 2em;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Additional CSS is defined below or in other CSS files, as per instructions */
 
 main.container {
   background-color: white;
   max-width: 450px;
   margin: auto;
   margin-top: 80px;
-  padding: 2em;
+  padding: 1em 2em;
 }
