@@ -4,67 +4,21 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// all functions called here are defined in helpers.js
+
 $(function() {
-
-  function swapError(newError) {
-    if (newError === $("#error").text()) return;
-    $("#error").slideUp(function() {
-      $("#error").text(newError);
-      $("#error").slideDown();
-    });
-  }
-
-  function renderTweets(tweetData) {
-    $('#tweets').empty();
-    rTweets = tweetData.map(createTweetElement).reverse();
-    // May need to remove .reverse()
-    // console.log(tweetData);
-    $('#tweets').append(rTweets);
-  }
-
-  function createTweetElement(tweet) {
-
-    // console.log(tweet.user);
-
-    var $tweet = $("<article>").addClass("tweet");
-
-    var $header = $("<header>").appendTo($tweet);
-    $("<img>").addClass("avatar").attr({src: tweet.user.avatars.small}).appendTo($header);
-    $("<h3>").text(tweet.user.name).appendTo($header);
-    $("<span>").text(tweet.user.handle).appendTo($header);
-
-    $("<p>").text(tweet.content.text).appendTo($tweet);
-
-    var $footer = $("<footer>").appendTo($tweet);
-    $("<p>").text(moment(tweet.created_at).fromNow()).appendTo($footer);
-    $('<p><i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
-
-    return $tweet;
-  }
-
-  function loadTweets() {
-    $.ajax({
-      method: "GET",
-      url: "/tweets"
-    })
-    .done(function(tweets) {
-      // console.log(tweets);
-      renderTweets(tweets);
-    });
-  }
 
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
 
     var input = event.target.elements.text.value;
 
-
     if (input.length > 140) {
-      swapError("Sorry, your tweet cannot exceed 140 characters.");
+      swapError($("#error"), "Sorry, your tweet cannot exceed 140 characters.");
       return;
     }
     if (input.trim().length < 1) {
-      swapError("Oops, you can't post a blank tweet.");
+      swapError($("#error"), "Oops, you can't post a blank tweet.");
       return;
     }
     if ($("#error").text()) {
@@ -97,3 +51,14 @@ $(function() {
   // renderTweets(data);
 });
 
+
+// NOTE TO SELF:
+    // Practice/review lexical scope, this, .bind()
+    // console.log(this);
+    // function test() {
+    //   console.log("Test output, don't forget to delete me.");
+    //   console.log(this);
+    //   console.log($(this));
+    //   return;
+    // }
+    // test();
