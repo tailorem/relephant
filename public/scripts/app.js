@@ -6,6 +6,14 @@
 
 $(function() {
 
+  function swapError(newError) {
+    if (newError === $("#error").text()) return;
+    $("#error").slideUp(function() {
+      $("#error").text(newError);
+      $("#error").slideDown();
+    });
+  }
+
   function renderTweets(tweetData) {
     $('#tweets').empty();
     rTweets = tweetData.map(createTweetElement).reverse();
@@ -50,20 +58,17 @@ $(function() {
 
     var input = event.target.elements.text.value;
 
-    $("#error").slideUp();
 
     if (input.length > 140) {
-      event.preventDefault();
-
-      $("#error").slideDown().text("Sorry, your tweet cannot exceed 140 characters.");
-      // alert("Sorry, your tweet cannot exceed 140 characters.");
+      swapError("Sorry, your tweet cannot exceed 140 characters.");
       return;
     }
     if (input.trim().length < 1) {
-      event.preventDefault();
-      $("#error").slideDown().text("Oops, you can't post a blank tweet.");
-      // alert("Oops, you can't post a blank tweet.");
+      swapError("Oops, you can't post a blank tweet.");
       return;
+    }
+    if ($("#error").text()) {
+      $("#error").slideUp();
     }
 
     $.ajax({
@@ -72,7 +77,6 @@ $(function() {
       data: $(this).serialize()
     })
     .done(function() {
-      console.log("am i here");
       loadTweets();
     });
 
