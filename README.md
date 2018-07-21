@@ -1,8 +1,8 @@
 # Tweeter Project
 
-Tweeter (in this specific instance, Relephant) is a simple, single-page Twitter clone.
+The Tweeter project (in this specific instance, called Relephant) is a simple, single-page Twitter clone.
 
-Built upon LHL provided starter-code to learn and practice HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node, Express and MongoDB back-end skills.
+Built upon LHL-provided starter-code to learn and practice HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node, Express and MongoDB back-end skills.
 
 ## Getting Started
 
@@ -20,11 +20,11 @@ Built upon LHL provided starter-code to learn and practice HTML, CSS, JS, jQuery
 ## Additional Notes
 
 This project uses MongoDB for its database.
+Please make sure to view this page without browser extensions to avoid issues with loading content.
 
 ## Final Product
 
-!["Screenshot of page on load"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-20%20at%204.37.40%20PM.png?raw=true)
-!["Screenshot of new-tweet slideout"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-20%20at%204.33.27%20PM.png?raw=true)
-!["Screenshot of error"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-20%20at%204.33.08%20PM.png?raw=true)
+View the live version at http://relephant.herokuapp.com/
 
-View the live version at http://tweetertale.herokuapp.com/
+!["Screenshot of page on load"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-21%20at%2011.38.54%20AM.png?raw=true)
+!["Screenshot of new-tweet slideout and error"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-21%20at%2011.41.02%20AM.png?raw=true)
