@@ -27,10 +27,6 @@
   margin: .5em;
 }
 
-.new-tweet button {
-  border-radius: .5em;
-}
-
 .neg-count {
   color: red;
 }

@@ -40,11 +40,20 @@ main.container {
   font-size: smaller;
 }
 
-button:hover {
-  cursor: pointer;
-  opacity: 1;
+input {
+  border: 0;
+  border-radius: .25em;
+  height: 1.5em;
 }
 
-button:focus, textarea:focus {
+button {
+  border-radius: .5em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+*:focus {
   outline: none;
 }

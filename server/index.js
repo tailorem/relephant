@@ -12,6 +12,7 @@ const app           = express();
 
 // require MongoDB
 const {MongoClient} = require("mongodb");
+// REFERENCE: above is alternative to const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -39,9 +39,12 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/elephant.png">
       <h1 class="heading">RELEPHANT</h1>
-      <div class="right">
-        <button type="button" id="compose">TRUMPET</button>
-      </div>
+      <form id="register" method="POST" action="/register">
+        <input type="text" name="username" placeholder="username" autocomplete="off">
+        <input type="password" name="password" placeholder="password" autocomplete="off">
+        <button>REGISTER</button>
+      </form>
+      <button id="compose" type="button">TRUMPET IT</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -50,8 +53,8 @@
         <h2>Make a statement!</h2>
         <hr />
         <form method="POST" action="/tweets" id="testform">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <button type="submit" name="tweet">Trumpet!</button>
+          <textarea name="text" placeholder="What are you trumpeting about?"></textarea>
+          <button type="submit" name="tweet">TRUMPET</button>
           <span class="counter">140</span>
           <p id="error"></p>
         </form>
