@@ -16,11 +16,14 @@ Built upon LHL-provided starter-code to learn and practice HTML, CSS, JS, jQuery
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- dotenv
+- MongoDB
 
 ## Additional Notes
 
-This project uses MongoDB for its database.
-Please make sure to view this page without browser extensions to avoid issues with loading content.
+This project uses MongoDB for its database, please make sure it is active when accessing locally.
+Please make sure to view this page without browser extensions to avoid issues loading content.
 
 ## Final Product
 
@@ -28,3 +31,4 @@ View the live version at http://relephant.herokuapp.com/
 
 !["Screenshot of page on load"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-21%20at%2011.38.54%20AM.png?raw=true)
 !["Screenshot of new-tweet slideout and error"](https://github.com/tailorem/tweeter/blob/master/docs/Screen%20Shot%202018-07-21%20at%2011.41.02%20AM.png?raw=true)
+
