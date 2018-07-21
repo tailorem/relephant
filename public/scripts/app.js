@@ -7,7 +7,7 @@ $(function() {
     var input = event.target.elements.text.value;
 
     if (input.length > 140) {
-      swapError($("#error"), "Sorry, that trumpet was too loud.");
+      swapError($("#error"), "Oops, that trumpet was too loud.");
       return;
     }
     if (input.trim().length < 1) {

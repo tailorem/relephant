@@ -39,3 +39,7 @@ main.container {
   text-align: center;
   font-size: smaller;
 }
+
+button:focus, textarea:focus {
+  outline: none;
+}

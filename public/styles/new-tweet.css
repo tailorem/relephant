@@ -1,4 +1,4 @@
-section.new-tweet {
+.new-tweet {
   background-color: #eee;
   border-radius: 1.3em;
   border: solid 3px darkgrey;
@@ -6,25 +6,29 @@ section.new-tweet {
   padding: .75em;
 }
 
-section.new-tweet hr {
+.new-tweet hr {
   margin: 0;
   margin-bottom: 1em;
 }
 
-section.new-tweet textarea {
+.new-tweet textarea {
   width: 100%;
 }
 
-section.new-tweet h2 {
+.new-tweet h2 {
   margin: 0;
   font-weight: 700;
 }
 
-section.new-tweet span {
+.new-tweet span {
   float: right;
   font-size: smaller;
   font-style: italic;
   margin: .5em;
+}
+
+.new-tweet button {
+  border-radius: .5em;
 }
 
 .neg-count {
