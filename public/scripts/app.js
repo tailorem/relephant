@@ -7,11 +7,11 @@ $(function() {
     var input = event.target.elements.text.value;
 
     if (input.length > 140) {
-      swapError($("#error"), "Sorry, your tweet cannot exceed 140 characters.");
+      swapError($("#error"), "Sorry, that trumpet was too loud.");
       return;
     }
     if (input.trim().length < 1) {
-      swapError($("#error"), "Oops, you can't post a blank tweet.");
+      swapError($("#error"), "Oops, that trumpet wasn't loud enough.");
       return;
     }
     if ($("#error").text()) {

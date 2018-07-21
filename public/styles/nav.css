@@ -1,6 +1,6 @@
 #nav-bar {
   background-color: #00a087;
-  color: #e8fdff;
+  color: white;
   height: 80px;
   padding: 0px 2em;
   position: fixed;
@@ -16,11 +16,12 @@
   width: 80px;
 }
 
-#nav-bar .header {
+#nav-bar .heading {
+  color: #23292f;
   float: left;
-  font-size: 2em;
+  font-size: 3em;
   line-height: 80px;
-  margin-left: 10px;
+  margin: 0 .5em;
 }
 
 #nav-bar .right {
@@ -31,9 +32,9 @@
 
 #compose {
   background-color: white;
-  border: solid 1px #244751;
-  border-radius: 5px;
-  color: #00a087;
+  border: solid 3px #23292f;
+  border-radius: 1.3em;
+  font-weight: bold;
   opacity: .75;
   padding: 0;
   outline: inherit;
@@ -43,7 +44,6 @@
 }
 
 #compose:hover {
-  color: #244751;
   opacity: 1;
 }
 

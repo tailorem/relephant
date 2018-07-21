@@ -1,16 +1,16 @@
 /*borders use px units, while the rest of the code uses em units*/
 
 .tweet {
-  border-radius: 5px;
-  border: solid 1px lightgray;
+  border-radius: 1.3em;
+  border: solid 3px lightgray;
   margin-top: 10px;
   word-break: break-word;
 }
 
 .tweet header {
   background-color: #eee;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 1.3em;
+  border-top-right-radius: 1.3em;
   /*color: #4f6b73;*/
   line-height: 100%;
   padding: 10px;
@@ -31,7 +31,7 @@
 
 .tweet .avatar {
   background-color: darkgrey;
-  border-radius: 5px;
+  border-radius: 1.3em;
   display: inline;
   float: left;
   height: 2.5em;
@@ -49,7 +49,7 @@
 }
 
 .tweet footer {
-  border-top: solid 1px lightgray;
+  border-top: solid .1em lightgray;
   justify-content: space-between;
   font-size: smaller;
   padding: .5em;
@@ -58,7 +58,7 @@
 
 .tweet footer p {
   display: inline;
-  margin: 0;
+  margin: 0 1em;
 }
 
 .tweet footer .icons {
@@ -71,7 +71,7 @@
 }
 
 .tweet:hover header, .tweet:hover img {
-  color: #244751;
+  color: #23292f;
   opacity: 1;
 }
 

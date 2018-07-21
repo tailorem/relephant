@@ -14,14 +14,18 @@ html {
 
 body {
   margin: 0;
-  color: #244751;
+  color: #23292f;
   background-color: #eee;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 300;
-  font-kerning: 2em;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Additional CSS is defined below or in other CSS files, as per instructions */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titan One', cursive;
+  font-weight: 400;
+  /*font-family: 'Holtwood One SC', serif;*/
+}
 
 main.container {
   background-color: white;
@@ -29,4 +33,9 @@ main.container {
   margin: auto;
   margin-top: 80px;
   padding: 1em 2em;
+}
+
+#attribution {
+  text-align: center;
+  font-size: smaller;
 }

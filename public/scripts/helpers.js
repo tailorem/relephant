@@ -22,7 +22,7 @@ function createTweetElement(tweet) {
 
   var $footer = $("<footer>").appendTo($tweet);
   $("<p>").text(moment(tweet.created_at).fromNow()).appendTo($footer);
-  $('<p><i class="fab fa-font-awesome-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
+  $('<p><i class="fas fa-trash-alt"></i> <i class="fab fa-font-awesome-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
 
   return $tweet;
 }

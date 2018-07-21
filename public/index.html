@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>Relephant</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Titan+One" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
@@ -37,21 +37,21 @@
 
     <!-- Top nav bar -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
-      <span class="header">Tweeter</span>
+      <img class="logo" src="/images/elephant.png">
+      <h1 class="heading">RELEPHANT</h1>
       <div class="right">
-        <button type="button" id="compose">New Tweet!</button>
+        <button type="button" id="compose">Trumpet!</button>
       </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2>Make a statement!</h2>
         <hr />
         <form method="POST" action="/tweets" id="testform">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" name="tweet" value="Tweet">
+          <input type="submit" name="tweet" value="Trumpet!">
           <span class="counter">140</span>
           <p id="error"></p>
         </form>
@@ -59,6 +59,7 @@
       <section id="tweets">
         <!-- articles go here -->
       </section>
+      <p id="attribution">Elephant icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
     </main>
 
   </body>
