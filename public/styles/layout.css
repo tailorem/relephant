@@ -40,6 +40,11 @@ main.container {
   font-size: smaller;
 }
 
+button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
 button:focus, textarea:focus {
   outline: none;
 }
