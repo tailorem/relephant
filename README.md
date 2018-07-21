@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter (in this specific instance, Relephant) is a simple, single-page Twitter clone.
 
 Built upon LHL provided starter-code to learn and practice HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node, Express and MongoDB back-end skills.
 

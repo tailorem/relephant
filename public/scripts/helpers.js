@@ -22,7 +22,9 @@ function createTweetElement(tweet) {
 
   var $footer = $("<footer>").appendTo($tweet);
   $("<p>").text(moment(tweet.created_at).fromNow()).appendTo($footer);
-  $('<p><i class="fas fa-trash-alt"></i> <i class="fab fa-font-awesome-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
+  $('<p><a href="#" class="trash"><i class="fas fa-trash-alt" ></i></a> <i class="fab fa-font-awesome-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></p>').addClass("icons").appendTo($footer);
+  // TO DO: replace the .trash alert with a jQuery slide-down 'error'
+  // $('<p class="sorry">').text("Sorry, an elephant never forgets.").appendTo($footer);
 
   return $tweet;
 }
@@ -42,5 +44,11 @@ function loadTweets() {
   })
   .done(function(tweets) {
     renderTweets(tweets);
+
+    $(".trash").click(function(event) {
+      event.preventDefault();
+      alert("Sorry, an elephant never forgets.");
+    });
+
   });
 }

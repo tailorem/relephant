@@ -25,6 +25,9 @@ $(function() {
     })
     .done(function() {
       loadTweets();
+
+      console.log($(".tweet").find("p"));
+
     });
 
     event.target.elements.text.value = "";
