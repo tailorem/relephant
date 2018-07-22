@@ -22,7 +22,7 @@ body {
 /* Additional CSS is defined below or in other CSS files, as per instructions */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Titan One', cursive;
+  font-family: 'Titan One', sans-serif;
   font-weight: 400;
   /*font-family: 'Holtwood One SC', serif;*/
 }
@@ -44,6 +44,7 @@ input {
   border: 0;
   border-radius: .25em;
   height: 1.5em;
+  margin: .15em .05em;
 }
 
 button {

@@ -1,6 +1,23 @@
 // All functions called in this file are defined in helpers.js
 $(function() {
 
+  $("#register form").submit(function(event) {
+    event.preventDefault();
+
+    console.log($(this).serialize());
+
+    $.ajax({
+      method: "POST",
+      url: "/register",
+      data: $(this).serialize()
+    })
+    .done(function() {
+      $("#register input").val("");
+    });
+
+  });
+
+
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
 
@@ -25,9 +42,6 @@ $(function() {
     })
     .done(function() {
       loadTweets();
-
-      console.log($(".tweet").find("p"));
-
     });
 
     event.target.elements.text.value = "";

@@ -5,10 +5,22 @@
 module.exports = function makeDataHelpers(db) {
   return {
 
+    saveUser: function(newUser, callback) {
+      db.collection("users").insertOne(newUser, function(err, res) {
+        callback(null);
+      });
+    },
+
+    getUsers: function(callback) {
+      const users = db.collection("users").find().toArray(function(err, users) {
+        callback(null, users);
+      });
+    },
+
     // Saves a tweet to "db"
     saveTweet: function(newTweet, callback) {
       db.collection("tweets").insertOne(newTweet, function(err, res) {
-        callback(null, true);
+        callback(null);
       });
     },
 

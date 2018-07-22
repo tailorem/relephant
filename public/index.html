@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+<!--     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="/styles/nav.css" />
     <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/tweets.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/tweets.css"/> -->
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -39,20 +39,24 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/elephant.png">
       <h1 class="heading">RELEPHANT</h1>
-      <form id="register" method="POST" action="/register">
-        <input type="text" name="username" placeholder="username" autocomplete="off">
-        <input type="password" name="password" placeholder="password" autocomplete="off">
-        <button>REGISTER</button>
-      </form>
       <button id="compose" type="button">TRUMPET IT</button>
     </nav>
+
+    <section id="register">
+      <form>
+        <input type="text" name="username" placeholder="username" autocomplete="off">
+        <input type="password" name="password" placeholder="password" autocomplete="off">
+        <input type="text" name="display_name" placeholder="display name" autocomplete="off">
+        <button>REGISTER</button>
+      </form>
+    </section>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Make a statement!</h2>
         <hr />
-        <form method="POST" action="/tweets" id="testform">
+        <form id="testform">
           <textarea name="text" placeholder="What are you trumpeting about?"></textarea>
           <button type="submit" name="tweet">TRUMPET</button>
           <span class="counter">140</span>

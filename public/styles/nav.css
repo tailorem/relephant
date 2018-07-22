@@ -20,20 +20,23 @@
 
 #nav-bar .heading {
   color: #23292f;
+  display: inline;
   justify-content: left;
   font-size: 3em;
   line-height: 80px;
-  margin: 0 .5em;
-}
-
-#nav-bar .right {
-  justify-content: right;
-  height: 100%;
-  line-height: 100%;
+  margin: 0 .25em;
 }
 
 #register {
-  margin: 1.75em;
+  float: right;
+  margin: 1.5em .25em;
+  padding: 0;
+  width: 200px;
+}
+
+#register form {
+  margin: 0;
+  padding: 0;
 }
 
 #compose {
