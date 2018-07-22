@@ -1,6 +1,6 @@
 users = [
   {
-    "handle": "tailorem",
+    "username": "tailorem",
     "password": "secret",
     "name": "Taylour",
     "avatar": "https://avatars3.githubusercontent.com/u/29444471?s=460&v=4",
@@ -9,10 +9,10 @@ users = [
 ];
 
 
-tweets = [
+var tweets = [
   {
     "user": {
-      "name": "Taylour",
+      "name": "Taylour Em",
       "avatars": {
         "small":   "https://avatars3.githubusercontent.com/u/29444471?s=460&v=4",
         "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
@@ -41,16 +41,16 @@ tweets = [
   },
   {
     "user": {
-      "name": "Johann von Goethe",
+      "name": "Newton",
       "avatars": {
         "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
         "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
       },
-      "handle": "@johann49"
+      "handle": "@newtron"
     },
     "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+      "text": "If I have seen far, it is by standing on the shoulders of giants."
     },
     "created_at": 1461113796368
   }

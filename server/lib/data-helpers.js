@@ -5,15 +5,10 @@
 module.exports = function makeDataHelpers(db) {
   return {
 
+    // Saves a new user to "db"
     saveUser: function(newUser, callback) {
       db.collection("users").insertOne(newUser, function(err, res) {
         callback(null);
-      });
-    },
-
-    getUsers: function(callback) {
-      const users = db.collection("users").find().toArray(function(err, users) {
-        callback(null, users);
       });
     },
 

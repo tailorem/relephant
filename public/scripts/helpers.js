@@ -10,7 +10,7 @@ function swapError(wrapper, newError) {
 }
 
 // Creates an HTML DOM structure for a tweet object
-function createTweetElement(tweet, user) {
+function createTweetElement(tweet) {
   var $tweet = $("<article>").addClass("tweet");
 
   var $header = $("<header>").appendTo($tweet);
@@ -30,41 +30,24 @@ function createTweetElement(tweet, user) {
 }
 
 // Takes in tweet data and creates a 'tweet element' for each tweet
-function renderTweets(tweetData, userData) {
+function renderTweets(tweetData) {
   $('#tweets').empty();
-
-  rTweets = [];
-  for (var i = 0; i < tweetData.length; i++) {
-    rTweets.push(createTweetElement(tweet, user));
-  }
-  tweetData.forEach(function(tweet) {
-  });
-
-  // rTweets = tweetData.map(createTweetElement).reverse();
+  rTweets = tweetData.map(createTweetElement).reverse();
   $('#tweets').append(rTweets);
 }
 
 // Loads all tweets stored in the database
 function loadTweets() {
-  $.get("/tweets").done(function(tweets) {
+  $.ajax({
+    method: "GET",
+    url: "/tweets"
+  })
+  .done(function(tweets) {
+    renderTweets(tweets);
 
-    $.get("/users").done(function(users) {
-
-      console.log(users);
-      renderTweets(tweets, users);
-
-  // });
-  // $.ajax({
-  //   method: "GET",
-  //   url: "/tweets"
-  // })
-  // .done(function(tweets) {
-  //   renderTweets(tweets);
-
-      $(".trash").click(function(event) {
-        event.preventDefault();
-        alert("Sorry, an elephant never forgets.");
-      });
+    $(".trash").click(function(event) {
+      event.preventDefault();
+      alert("Sorry, an elephant never forgets.");
     });
   });
 }

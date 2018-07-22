@@ -4,8 +4,6 @@ $(function() {
   $("#register form").submit(function(event) {
     event.preventDefault();
 
-    console.log($(this).serialize());
-
     $.ajax({
       method: "POST",
       url: "/register",

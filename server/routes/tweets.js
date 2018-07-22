@@ -26,10 +26,12 @@ module.exports = function(DataHelpers) {
       return;
     }
 
-    const user_id = req.session.user_id;
+    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
-      user_id: user_id,
-      content: req.body.text,
+      user: user,
+      content: {
+        text: req.body.text
+      },
       created_at: Date.now()
     };
     DataHelpers.saveTweet(tweet, (err) => {
@@ -42,13 +44,13 @@ module.exports = function(DataHelpers) {
   });
 
   tweetsRoutes.post("/register", function(req, res) {
-    let user_id = Math.random().toString(36).substr(2, 6);
-    req.session.user_id = user_id;
+    let random_id = Math.random().toString(36).substr(2, 6);
+    req.session.user_id = random_id;
     const user = {
-      "user_id": user_id,
+      "random_id": random_id,
       "username": req.body.username,
       "password": bcrypt.hashSync(req.body.password, 12),
-      "avatar": "https://vanillicon.com/" + md5(user_id) + "_50.png",
+      "avatar": "https://vanillicon.com/" + md5(random_id) + "_50.png",
       "display_name": req.body.display_name
     };
 
@@ -61,19 +63,6 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.get("/users", function(req, res) {
-    DataHelpers.getUsers((err, users) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        console.log(users);
-        res.json(users);
-      }
-    });
-  });
-
-
   return tweetsRoutes;
-
 };
 
